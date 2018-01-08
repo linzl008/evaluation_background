@@ -9,7 +9,7 @@ let config={
 }
 
 var sheetList = [
-    'table_name',
+    'basic_situation',
     // 'Sheet2'
 ]
 // xls-to-json 不支持 多个sheet 读取
@@ -17,7 +17,7 @@ function excelToJson(){
     for (var i = 0; i < sheetList.length; i++) {
         var sheetname = sheetList[i];
         node_xj({
-            input: "../data/test.xls",  // input xls
+            input: "../data/academic_degree.xlsx",  // input xls
             // output: "../data/output.json", // output json
             output: null, // output json 填null 表示不输出到文件
             sheet: sheetname  // specific sheetname
@@ -25,7 +25,8 @@ function excelToJson(){
             if(err) {
                 console.error(err);
             } else {
-                createSql('EUSER',result);
+                //createSql('EUSER',result);
+                createSql(sheetname,result);
                 // console.log(result);
             }
         });

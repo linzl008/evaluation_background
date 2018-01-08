@@ -7,7 +7,7 @@ var config = {
     user:'scott',　　//用户名
     password:'123456',　　//密码
     //IP:数据库IP地址，PORT:数据库端口，SCHEMA:数据库名称
-    connectString : "localhost:1521/LINZL", //172.29.108.74
+    connectString : "localhost:1521/orcl.aladinfun.com", //172.29.108.74
     poolMax : 12,   //设置连接池数量
 };
 //暴露使用的执行sql 的函数
